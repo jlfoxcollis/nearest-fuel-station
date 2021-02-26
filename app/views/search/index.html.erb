@@ -1,0 +1,24 @@
+<ul>
+  <li>
+    <%= @station.name %>
+  </li>
+  <li>
+    <%= @station.address %>
+  </li>
+  <li>
+    <%= @station.fuel_type %>
+  </li>
+  <li>
+    <% @station.access_times.each do |time| %>
+      <%= "Day: #{time[0]}, Hours: #{time[1]}" %><br>
+    <% end %>
+  </li>
+  <li>
+    Time down to the second! <%= @directions.time %>
+  </li>
+  <li>
+    <% @directions.instructions.each do |instruction| %>
+      <%= instruction %><br>
+    <% end %>
+  </li>
+</ul>
