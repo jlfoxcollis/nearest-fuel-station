@@ -1,14 +1,15 @@
 <ul>
   <li>
-    <%= @station.name %>
+    Name: <%= @station.name %>
   </li>
   <li>
-    <%= @station.address %>
+    Address: <%= @station.address %>
   </li>
   <li>
-    <%= @station.fuel_type %>
+    Fuel Type: <%= @station.fuel_type %>
   </li>
   <li>
+    Access Times:
     <% @station.access_times.each do |time| %>
       <%= "Day: #{time[0]}, Hours: #{time[1]}" %><br>
     <% end %>
